@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === 'development') {
 	app.use(webpackHotMiddleware(compiler))
 }  
 
-app.get('/*', (req, res) => {
+app.get('/', (req, res) => {
     console.log()
     res.sendFile(path.join(__dirname, '../index.html'));
 });

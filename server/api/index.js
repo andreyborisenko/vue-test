@@ -6,9 +6,9 @@ const parser = require('./parser');
 
 router.use(bodyParser.json());
 
-router.use((req, res) => {
+router.use((req, res, next) => {
 	console.log('here')
-	res.end()
+	next()
 })
 
 router.get('/methods', async (req, res) => {
