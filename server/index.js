@@ -12,6 +12,7 @@ app.use(history());
 app.use(bodyParser.json());
 
 app.use('/dist', express.static('dist'));
+app.use('/api', require('./api'))
 
 import webpack from 'webpack'                               
 import webpackMiddleware from 'webpack-dev-middleware'      
