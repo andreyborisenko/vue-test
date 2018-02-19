@@ -6,6 +6,11 @@ const parser = require('./parser');
 
 router.use(bodyParser.json());
 
+router.use((req, res) => {
+	console.log('here')
+	res.end()
+})
+
 router.get('/methods', async (req, res) => {
 	res.send(Object.keys(methods));
 })
